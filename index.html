@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a4a0c1021f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <img src="icon.png" alt="Icon" class="icon">
+          <!-- Title -->
+          <span class="mdl-layout-title">To Do App</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            
+          </nav>
+        </div>
+      </header>
+      
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div>
+
+            <div id="listheadline">
+              <h1 class="headline">To Do</h1>
+              
+            </div>
+            
+            <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric"></th>
+                  <th class="mdl-data-table__cell--non-numeric">Todo</th>
+                  <th>Tag</th>
+                  <th>Uhrzeit</th>
+                </tr>
+              </thead>
+              <tbody id="MyTable">
+                
+              </tbody>
+            </table>
+
+            <div class="addFieldtoList">
+
+              <div class="textFields">
+
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="todo">
+                    <label class="mdl-textfield__label" for="sample3">Todo...</label>
+                  </div>
+                </form>
+  
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="day">
+                    <label class="mdl-textfield__label" for="sample3">Tag...</label>
+                  </div>
+                </form>
+    
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="time">
+                    <label class="mdl-textfield__label" for="sample3">Uhrzeit...</label>
+                  </div>
+                </form>
+                
+              </div>
+              
+              <p>
+                <!-- Colored FAB button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="addtoList()">
+                  <i class="material-icons">add</i>
+                </button>
+              </p>
+
+            </div>
+
+          </div>
+        
+        </div>
+      </main>
+    </div>
+
+</body>
+<script>loadData()</script>
+</html>
